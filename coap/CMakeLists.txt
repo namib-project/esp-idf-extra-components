@@ -9,8 +9,8 @@ endif()
 set(include_dirs port/include port/include libcoap/include)
 
 set(srcs
-    "libcoap/src/address.c"
-    "libcoap/src/async.c"
+    "libcoap/src/coap_address.c"
+    "libcoap/src/coap_async.c"
     "libcoap/src/block.c"
     "libcoap/src/coap_asn1.c"
     "libcoap/src/coap_cache.c"
@@ -26,13 +26,13 @@ set(srcs
     "libcoap/src/encode.c"
     "libcoap/src/mem.c"
     "libcoap/src/net.c"
-    "libcoap/src/option.c"
+    "libcoap/src/coap_option.c"
     "libcoap/src/pdu.c"
     "libcoap/src/resource.c"
     "libcoap/src/str.c"
-    "libcoap/src/subscribe.c"
+    "libcoap/src/coap_subscribe.c"
     "libcoap/src/uri.c"
-    "port/src/coap_mbedtls.c")
+    "libcoap/src/coap_mbedtls.c")
 
 idf_component_register(SRCS "${srcs}"
                     INCLUDE_DIRS "${include_dirs}"
